@@ -7,7 +7,7 @@ object Dep {
 
     object AndroidX {
         val appCompat = "androidx.appcompat:appcompat:1.1.0"
-        val constraint = "androidx.constraintlayout:constraintlayout:1.1.2"
+        val constraint = "androidx.constraintlayout:constraintlayout:1.1.3"
 
         val coreKtx = "androidx.core:core-ktx:1.2.0"
     }
