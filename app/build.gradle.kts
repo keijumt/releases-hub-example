@@ -2,7 +2,9 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-android-extensions")
+    id("com.releaseshub.gradle.plugin")
 }
+
 android {
     compileSdkVersion(29)
     buildToolsVersion = "29.0.2"
@@ -21,6 +23,7 @@ android {
         }
     }
 }
+
 dependencies {
     implementation(Dep.Kotlin.stdlibJvm)
     implementation(Dep.AndroidX.appCompat)
@@ -28,4 +31,16 @@ dependencies {
     implementation(Dep.AndroidX.constraint)
     testImplementation(Dep.Test.junit)
     androidTestImplementation(Dep.Test.espresso)
+}
+
+releasesHub {
+    dependenciesBasePath = "buildSrc/src/main/java/"
+    dependenciesClassNames = listOf("Dep.kt")
+    pullRequestEnabled = true
+    pullRequestsMax = 3
+    pullRequestLabels = listOf("dependencies")
+    gitHubUserName = "keijumt"
+    gitHubUserEmail = "keijumt@gmail.com"
+    gitHubRepositoryOwner = "keijumt"
+    gitHubRepositoryName = "releases-hub-example"
 }

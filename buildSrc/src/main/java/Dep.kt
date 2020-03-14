@@ -2,6 +2,7 @@ object Dep {
     object GradlePlugin {
         val android = "com.android.tools.build:gradle:3.6.1"
         val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61"
+        val releaseHub = "com.releaseshub:releases-hub-gradle-plugin:1.4.0"
     }
 
     object AndroidX {
